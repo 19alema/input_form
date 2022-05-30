@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME CDN -->
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="from_container">
+      <div class="form_intro">
+        <h1 class="intro_title">
+            Learn to code by watching others
+        </h1>
+
+        <p class="intro_info">
+            See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+            but understanding how developers think is invaluable.
+        </p>
+      </div>
+      <div class="form">
+        <p class="form_title">
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </p>
+
+        <form>
+          <div class="input">
+            <div class="form_input">
+              <input type="text" name="name" id="firstName" placeholder="First Name" required>
+              <div class="iconbox">
+              <img src="images/icon-error.svg" alt="" class="invalid">
+              </div>
+            </div>
+
+            <p class="invalid-feedback">Please enter a valid name</p>
+          </div>
+
+         <div class="input">
+            <div class="lastname-form_input">
+              <input type="text" name="name" id="lastName" placeholder="Last Name" required>
+              <div class="iconbox">
+                <img src="images/icon-error.svg" alt="" class="invalidlastname">
+              </div>
+            </div>
+
+            <p class="invalidlastname-feedback">Please enter a valid name</p>
+         </div>
+
+         <div class="input">
+            <div class="form_input email_input">
+              <input type="email" name="name" id="email" placeholder="Email Address" required>
+              <div class="iconbox">
+              <img src="images/icon-error.svg" alt="" class="invalid invalidemail">
+              </div>
+            </div>
+
+            <p class="invalid-feedback invalidemail_feedback">Please enter a valid email</p>
+         </div>
+
+        <div class="input">
+            <div class="form_input password_input">
+              <input type="password"  name="name" id="password" placeholder="Password" required>
+              <div class="iconbox">
+              <img src="images/icon-error.svg" alt="" class="invalidpassword invalid">
+              </div>
+            </div>
+            <p class="invalidpassword-feedback invalid-feedback">Password invalid</p>
+        </div>
+
+          <div class="form_input">
+            <button type="submit" class="btn">
+                Claim your free trial
+            </button>
+          </div>
+
+          <p class="form_footer">
+            By clicking the button, you are agreeing to our <span>Terms and Services</span>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

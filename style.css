@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+        /* ### Primary */
+
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+
+    /* ### Accent */
+
+    --Blue: hsl(248, 32%, 49%);
+    --White: #ffffff;
+
+    /* ### Neutral */
+
+    --Dark-Blue: hsl(249, 10%, 26%) ;
+    --Grayish-Blue: hsl(246, 25%, 77%);
+
+
+    --regularweight: 400;
+    --mdweight: 500;
+    --semibold: 600;
+    --bold: 700;
+
+    --font: 16px;
+    --radius: 6px;
+
+}
+
+.container{
+    background-image: url("images/bg-intro-mobile.png");
+    background-color: var(--Red);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   height: 100vh;
+}
+
+.form_intro {
+    text-align: center;
+    color: var(--White);
+    padding: 20px;
+}
+
+.intro_title {
+    line-height: 1.5em;
+    font-weight: var(--bold);
+}
+
+.form_title {
+    font-size: var(--font);
+    padding: 1.2em 20px;
+    color: var(--White);
+    background: var(--Blue);
+    margin-bottom: 1.5em;
+    border-radius: var(--radius);
+}
+
+.form_title span {
+    font-weight: var(--bold);
+}
+
+
+.intro_info {
+   line-height: 1.6;
+   padding: 1em 0;
+   font-weight: var(--semibold);
+}
+.from_container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+form {
+    background: var(--White);
+    padding: 2em;
+    border-radius: var(--radius);
+}
+
+.form_input ,.lastname-form_input{
+    display: flex;
+    justify-content: space-between;
+    padding: .8em 10px;
+    background-color: var(--White);
+    align-items: center;
+    border: 2px solid var(--Grayish-Blue);
+    margin:10px 0;
+    border-radius: var(--radius)
+}
+.active.form_input , .active.lastname-form_input, .active.email_input, .active.password_input{
+    border-color: var(--Red);
+}
+
+.form_input:hover {
+    border: 2px solid var(--Dark-Blue);
+}
+
+input,button {
+    border: 0;
+    background: inherit;
+    outline: 0;
+}
+
+.form_input:nth-child(5) {
+    background: var(--Green);
+    cursor: pointer;
+}
+
+button {
+    color: var(--White);
+    font-weight: var(--semibold);
+    cursor: pointer;
+}
+
+
+.invalid, .invalidlastname {
+    display: none;
+}
+.active.invalid, .active.invalidlastname, .active.invalidemail, .active.invalidpassword {
+    display: block;
+}
+
+input,button {
+    width: 100%;
+}
+
+.invalid-feedback ,.invalidlastname-feedback{
+    font-size: 10px;
+    text-align: right;
+    display: none;
+    color: var(--Red)
+}
+.active.invalid-feedback , .active.invalidlastname-feedback, .active.invalidpassword-feedback,.active.invalidemail-feedback{
+    display: block;
+}
+
+.form_footer {
+    font-size: var(--font);
+    padding: 5px 25px;
+    color: var(--Grayish-Blue)
+}
+.form_footer span {
+    color: var(--Red);
+    cursor: pointer;
+}
+
+@media(min-width: 768px ) {
+    .from_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .form_intro {
+    text-align: left;
+}
+    .intro_title {
+        font-size: 3em;
+        font-weight: bolder;
+        line-height: 1.2;
+        padding-bottom: .2em;
+    }
+}
